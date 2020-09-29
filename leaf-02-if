@@ -27,7 +27,7 @@ iface swp50
 
 auto bridge
 iface bridge
-    bridge-ports swp1 vxlan10 peerlink bond10
+    bridge-ports swp2 vxlan10 peerlink bond10
     bridge-vids 10 
     bridge-vlan-aware yes
     
