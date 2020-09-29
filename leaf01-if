@@ -6,7 +6,13 @@ iface lo inet loopback
 
 auto swp1
 iface swp1
+    
+auto bond10
+iface bond10
     bridge-access 10
+    bond-slaves swp1
+    clag-id 1
+    bond-lacp-bypass-allow yes
 
 auto swp49
 iface swp49
