@@ -1,12 +1,18 @@
 auto lo
 iface lo inet loopback
     address 10.0.0.112/32
-
+    
 auto swp1
 iface swp1
+    address 10.10.20.1/24
 
 auto swp2
 iface swp2
+    address 10.10.30.1/24
+
+# auto swp3
+# iface swp3
+#     address a.b.c.d/31
 
 auto mgmt
 iface mgmt
