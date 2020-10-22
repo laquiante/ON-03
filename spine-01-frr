@@ -1,20 +1,25 @@
+!
+frr version 7.4+cl4u1
 frr defaults datacenter
-hostname spine01
+hostname SPiNE01
 log syslog informational
+zebra nexthop proto only
 service integrated-vtysh-config
 !
 router bgp 42000000
  bgp router-id 10.0.0.111
- neighbor swp1 interface remote-as external
- neighbor swp2 interface remote-as external
+ bgp bestpath as-path multipath-relax
+ neighbor 10.10.10.2 remote-as external
+ neighbor 10.10.40.2 remote-as external
+# neighbor a.b.c.d remote-as external
  !
  address-family ipv4 unicast
   redistribute connected
  exit-address-family
  !
  address-family l2vpn evpn
-  neighbor swp1 activate
-  neighbor swp2 activate
+  neighbor 10.10.10.2 activate
+  neighbor 10.10.40.2 activate
   advertise-all-vni
  exit-address-family
 !
