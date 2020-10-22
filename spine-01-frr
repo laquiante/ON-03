@@ -11,7 +11,7 @@ router bgp 42000000
  bgp bestpath as-path multipath-relax
  neighbor 10.10.10.2 remote-as external
  neighbor 10.10.40.2 remote-as external
-# neighbor a.b.c.d remote-as external
+! neighbor a.b.c.d remote-as external
  !
  address-family ipv4 unicast
   redistribute connected
