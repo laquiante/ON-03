@@ -49,7 +49,7 @@ iface vni102001
     bridge-access 2001
     bridge-learning off
     mstpctl-bpduguard yes
-    mtspctl-portbpdufilter yes
+    mstpctl-portbpdufilter yes
     bridge-arp-nd-suppress on
     
 auto vni102002
