@@ -27,15 +27,47 @@ iface swp50
 
 auto bridge
 iface bridge
-    bridge-ports swp2 vxlan10 peerlink bond10
-    bridge-vids 10 
+    bridge-ports peerlink swp2 vxlan10 bond10 swp49 swp50 vni102001 vni102002
+    bridge-vids 10 2001 2002
     bridge-vlan-aware yes
+    
+auto vlan2001
+iface vlan2001
+    address 10.10.40.2/24
+    vlan-id 2001
+    vlan-raw-device bridge
+    
+auto vlan2002
+iface vlan2002
+    address 10.10.30.2/24
+    vlan-id 2002
+    vlan-raw-device bridge
+    
+auto vni102001
+iface vni102001
+    vxlan-id 102001
+    bridge-access 2001
+    bridge-learning off
+    mstpctl-bpduguard yes
+    mtspctl-portbpdufilter yes
+    bridge-arp-nd-suppress on
+    
+auto vni102002
+iface vni102002
+    vxlan-id 102002
+    bridge-access 2002
+    bridge-learning off
+    mstpctl-bpduguard yes
+    mstpctl-portbpdufilter yes
+    bridge-arp-nd-suppress on
     
 auto swp51
 iface swp51
+    bridge-access 2001
 
 auto swp52
 iface swp52
+    bridge-access 2002
     
 auto peerlink
 iface peerlink
