@@ -1,0 +1,4 @@
+---
+- include oob-mgmt-server.yaml
+  include host11.yaml
+  include host22.yaml
