@@ -33,7 +33,7 @@
         dest: /home/cumulus/.ssh/
         owner: cumulus
         group: admin
-        mode: u+rwx
+        mode: u+rw
         
     - name: change permission for rsa private key
       ansible.builtin.file:
