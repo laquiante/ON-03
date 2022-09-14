@@ -19,6 +19,6 @@ echo "$USERPASS" | su cumulus
 echo "USER :$USER"
 echo "DIR  :$PWD"
 cd $HOME
-echo "DIR :$PWD
+echo "DIR :$PWD"
  
 exit 0 
