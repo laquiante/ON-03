@@ -12,7 +12,8 @@ USERPASS="Academy123"
 TARGET1="host11"
 TARGET2="host22"
 
-CUMULUS_HOME="/home/cumulus"
+CUMULUS_HOME='/home/cumulus'
+echo "cumulus_home :$CUMULUS_HOME"
 
 echo "$USERPASS" | sshpass ssh-copy-id -f -i $KEYLOCATION "$USER"@"$TARGET1"
 echo "$USERPASS" | sshpass ssh-copy-id -f -i $KEYLOCATION "$USER"@"$TARGET2"
