@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # ALQ, Wittdün 2022
+# run via $ sudo bash start
 
 sudo ansible-playbook /home/ubuntu/ON-03/main.yaml
 
