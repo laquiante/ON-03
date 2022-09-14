@@ -16,7 +16,13 @@ CUMULUS_HOME="/home/cumulus"
 echo "$USERPASS" | sshpass ssh-copy-id -f -i $KEYLOCATION "$USER"@"$TARGET1"
 echo "$USERPASS" | sshpass ssh-copy-id -f -i $KEYLOCATION "$USER"@"$TARGET2"
 
-sudo -u cumulus
+whoami
+sudo -i -u cumulus bash << EOF
+echo "In"
+whoami
+EOF
+echo "Out"
+whoami
 
 echo "USER :$USER"
 echo "DIR  :$PWD"
