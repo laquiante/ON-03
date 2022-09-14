@@ -13,5 +13,12 @@ TARGET2="host22"
 
 echo "$USERPASS" | sshpass ssh-copy-id -f -i $KEYLOCATION "$USER"@"$TARGET1"
 echo "$USERPASS" | sshpass ssh-copy-id -f -i $KEYLOCATION "$USER"@"$TARGET2"
+
+echo "$USERPASS" | su cumulus
+
+echo "USER :$USER"
+echo "DIR  :$PWD"
+cd $HOME
+echo "DIR :$PWD
  
 exit 0 
