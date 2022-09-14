@@ -32,7 +32,7 @@ sudo -i -u cumulus bash << EOF
     cd $CUMULUS_HOME
     sudo chmod 744 ./prepare
     export PATH="$CUMULUS_HOME/ON-01/:$PATH" 
-    sudo bash ./prepare
+    sudo bash "$CUMULUS_HOME/ON-01/prepare"
   fi
 
 EOF
