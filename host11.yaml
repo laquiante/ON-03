@@ -24,7 +24,7 @@
     - name: ensure file exists
       copy:
         content: ""
-        dest: /home/cumulus/.ssh/authoriced_keys
+        dest: /home/cumulus/.ssh/authoriced_keys.pub
         force: no
         group: admin
         owner: cumulus
