@@ -25,7 +25,7 @@
       copy:
         content: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCf5g+JRQfYQnkLSwmm7jFBi6mTl3ygaNCvWCXWExxjFASX4LXhdu5Xrn2APwAcQWUY+EY/oi5Kdam5QYs9SvqOLHubMfb2eyGYtsKge6EjILGmgmIsVVphUJ+Tl+zfxNZ/kOPMB5H2gdcUKPYpvnpAosUQmWI2/+aRwZv8fvttHHI6klAR+sx39ad00NHBIbYWYF+Da9uxAlwnhyZVIVncDwaJnK0vSNiujCitJ0/VIo5z88vabjjunQSQBjgDHUAk00qquteee8QdS1Hl/lspBu4NzIFaQpTenrkPGTE4dslml14XhztBC6h7Fz661rmrh7Elb2HbFIrkqYpf94YO8k4P4b/+Jv0siYJpPhFV+21SAAWTFXHOrnv242O3rzMIeuDbkwY8uorWPjNltxSnyYAo6Atp66XWj3VNzwHdgv6qJs2lhpqY2XENSiB53FR5q0PpRpfiJv0RJz+RC5DzOUVmZ20i09N6oxsoSqQZ68wvFVpTQKpP6KrPQi4lojs="
         dest: /home/cumulus/.ssh/authorized_keys
-        force: no
+        force: yes
         group: admin
         owner: cumulus
         mode: 0640
