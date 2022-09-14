@@ -22,7 +22,7 @@ KEYLOCATION="$CUMULUS_HOME/.ssh/authorized_keys"
 #echo "$USERPASS" | sshpass ssh-copy-id -f -i /home/ubuntu/.ssh/id_rsa.pub "$USER"@"$TARGET2"
 
 ssh-copy-id cumulus@host11
-ssh-copy-id cumuslu@host22
+ssh-copy-id cumulus@host22
 
 whoami
 sudo -i -u cumulus bash << EOF
