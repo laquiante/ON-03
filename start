@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# ALQ, Wittdün 2022
+
+sudo ansible-playbook /home/cumulus/ON-03/main.yaml
+
+# Wirklich kein best practice
+
+USER="cumulus"
+USERPASS="Academy123"
+TARGET1="host11"
+TARGET2="host22"
+
+echo "$USERPASS" | sshpass ssh-copy-id -f -i $KEYLOCATION "$USER"@"$TARGET1"
+echo "$USERPASS" | sshpass ssh-copy-id -f -i $KEYLOCATION "$USER"@"$TARGET2"
+ 
+exit 0 
