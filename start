@@ -2,7 +2,7 @@
 
 # ALQ, Wittdün 2022
 
-sudo ansible-playbook /home/cumulus/ON-03/main.yaml
+sudo ansible-playbook /home/ubuntu/ON-03/main.yaml
 
 # Wirklich kein best practice
 
