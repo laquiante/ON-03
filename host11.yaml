@@ -19,7 +19,7 @@
         state: directory
         owner: cumulus
         group: admin
-        mode: 0640
+        mode: 0777
   
     - name: ensure file exists
       copy:
@@ -28,5 +28,5 @@
         force: no
         group: admin
         owner: cumulus
-        mode: 0640
+        mode: 0777
     
