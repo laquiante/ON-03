@@ -54,6 +54,7 @@ sudo -i -u cumulus bash << EOF
 
 EOF
 
+clear
 echo "Please consider switching to user to cumulus"
-
+echo "Please make sure/verify you end up in the target user directory"
 exit 0 
