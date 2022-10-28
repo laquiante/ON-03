@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # ALQ, Wittdün 2022
+# 28.10.2022 
+#   fixed typos
 # run via $ sudo bash start
 
-sudo ansible-playbook /home/ubuntu/ON-03/main.yaml
+sudo ansible-playbook /home/ubuntu/ON-03/.main.yaml
 
 # Wirklich kein best practice
 
@@ -37,7 +39,7 @@ sudo -i -u cumulus bash << EOF
 
   if [ ! -d "$CUMULUS_HOME/ON-01" ]; then
     git clone https://github.com/laquiante/ON-01
-    echo "git cone done"
+    echo "git clone done"
   fi
 
   echo "test ob ON-01 existiert"
