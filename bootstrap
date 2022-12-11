@@ -1,0 +1,23 @@
+#!/bin/bash
+
+clear
+start=$(jq -n 'env.ILT | tonumber')
+echo $start
+if [ $start == 0 ]; then echo "bootstrapping the ILT infrastructure"
+        /home/ubuntu/ON-03/start
+elif [ $start == 1 ]; then echo "cleaning up --- erasing system"
+
+read -p "Are you really sure (y/n)?" choice
+case "$choice" in
+  y|Y )
+        echo "ok"
+        ./.erase
+        ;;
+  n|N )
+        echo "thanky you for using the environment, good bye"
+        ;;
+  * ) echo "invalid";;
+esac
+else
+echo "thank you for using the environment, good bye"
+fi
