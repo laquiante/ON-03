@@ -1,11 +1,11 @@
 #!/bin/bash
 
 clear
-start=$(jq -n 'env.ILT | tonumber')
-echo $start
-if [ $start == 0 ]; then echo "bootstrapping the ILT infrastructure"
+start1=$(jq -n 'env.ILT | tonumber')
+echo $start1
+if [ $start1 == 0 ]; then echo "bootstrapping the ILT infrastructure"
         /home/ubuntu/ON-03/start
-elif [ $start == 1 ]; then echo "cleaning up --- erasing system"
+elif [ $start1 == 1 ]; then echo "cleaning up --- erasing system"
 
 read -p "Are you really sure (y/n)?" choice
 case "$choice" in
